@@ -1,0 +1,4 @@
+project=gmh
+architecture=container
+test=rspec
+template=erb
