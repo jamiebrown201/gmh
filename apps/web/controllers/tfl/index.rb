@@ -3,7 +3,8 @@ module Web::Controllers::Tfl
     include Web::Action
 
     def call(params)
-      @display = journey
+      @display = HTTParty.get("https://api.tfl.gov.uk/journey/journeyresults/TW92NQ/to/e20ap")
+     end
       self.body = @display
     end
 
