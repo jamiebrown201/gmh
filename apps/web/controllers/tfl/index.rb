@@ -4,7 +4,6 @@ module Web::Controllers::Tfl
 
     def call(params)
       @display = HTTParty.get("https://api.tfl.gov.uk/journey/journeyresults/TW92NQ/to/e20ap")
-     end
       self.body = @display
     end
 
